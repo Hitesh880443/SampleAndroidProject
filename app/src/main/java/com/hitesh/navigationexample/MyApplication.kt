@@ -1,6 +1,7 @@
 package com.hitesh.navigationexample
 
 import android.app.Application
+import com.hitesh.navigationexample.di.networkModule
 import com.hitesh.navigationexample.di.repoModule
 import com.hitesh.navigationexample.di.viewModelModule
 import org.koin.android.ext.koin.androidContext
@@ -11,7 +12,11 @@ class MyApplication : Application() {
         super.onCreate()
         startKoin {
             androidContext(this@MyApplication)
-            modules(repoModule, viewModelModule)
+            modules(
+                repoModule,
+                viewModelModule,
+                networkModule
+            )
         }
     }
 }

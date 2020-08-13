@@ -9,7 +9,7 @@ import org.koin.android.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
 val repoModule = module {
-    factory { HomeRepository(androidContext()) }
+    factory { HomeRepository(get()) }
     factory { SearchRepository(androidContext()) }
     factory { SettingRepository(androidContext()) }
 }
