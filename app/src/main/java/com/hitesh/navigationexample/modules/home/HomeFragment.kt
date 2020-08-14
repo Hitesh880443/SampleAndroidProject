@@ -1,18 +1,18 @@
 package com.hitesh.navigationexample.modules.home
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.hitesh.navigationexample.R
 import com.hitesh.navigationexample.databinding.FragmentHomeBinding
 import kotlinx.android.synthetic.main.fragment_home.*
-import kotlinx.coroutines.*
-import org.koin.android.scope.lifecycleScope
-import org.koin.android.scope.scope
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
 import org.koin.android.viewmodel.ext.android.viewModel
 import kotlin.coroutines.CoroutineContext
 

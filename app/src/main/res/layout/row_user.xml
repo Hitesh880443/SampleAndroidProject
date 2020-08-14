@@ -21,14 +21,23 @@
             android:layout_height="wrap_content"
             android:padding="5dp">
 
+            <ImageView
+                android:id="@+id/iv_avatar"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                app:avatar="@{user.avatar}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
             <TextView
                 android:id="@+id/tv_full_name"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
                 android:text="@{user.fullName}"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toEndOf="@id/iv_avatar"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:text="Full Name" />
 
@@ -36,10 +45,11 @@
                 android:id="@+id/tv_email"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
                 android:text="@{user.email}"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toEndOf="@id/iv_avatar"
                 app:layout_constraintTop_toBottomOf="@id/tv_full_name"
                 tools:text="email" />
 
